@@ -25,7 +25,7 @@ export default function Files() {
           </h2>
           <button
             className="bg-blue-500 text-white 
-           px-2 py-1 rounded-lg hover:text-blue-500 hover:bg-white"
+           px-2 py-1 rounded-lg hover:text-blue-500 hover:bg-white w-28 mx-auto md:mx-0"
             onClick={async () => {
               const input = document.createElement("input");
               input.type = "file";

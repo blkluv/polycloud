@@ -1,21 +1,23 @@
-// src/Navbar.js
-
+import banner from "../assets/banner.png";
 import React from "react";
 const Navbar = () => {
   return (
     <nav className="bg-blue-500 p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <h1
-          className="text-white text-2xl md:text-3xl font-bold cursor-pointer"
+        <div
+          className="flex items-center"
           onClick={() => {
             window.location.assign((window.location.href = "/"));
           }}
         >
-          PolyCloud V2
-        </h1>
+          <img src={banner} alt="banner" className="h-12 mr-3" />
+          <h1 className="text-white text-lg md:text-3xl font-bold cursor-pointer">
+            PolyCloud V2
+          </h1>
+        </div>
 
         <button
-          className="text-white md:font-semibold mx-6 text-center md:text-xl"
+          className="text-white md:font-semibold mx-6 text-center md:text-xl text-sm"
           onClick={() => {
             window.open("https://linktr.ee/ayaaneth", "_blank");
           }}

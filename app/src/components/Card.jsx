@@ -1,5 +1,4 @@
 import React from "react";
-import banner from "../assets/banner.png";
 import { saveAs } from "file-saver";
 import { BsCloudDownloadFill } from "react-icons/bs";
 import { BsFillShareFill } from "react-icons/bs";
@@ -11,37 +10,100 @@ export default function Card({ file }) {
 
   const localeDate = date.toLocaleDateString("en-GB");
   const extension = file.fileName.match(/\.([^\.]+)$/)[1];
+  // const extension = "mp3";
 
-  let gatewayURL, downloadURL;
+  let gatewayURL;
+  const downloadURL = `https://ipfs.io/ipfs/${file.fileCID.split("//")[1]}`;
 
-  if (extension.match(/jpg|jpeg|png|gif|webp|tiff|psd/)) {
+  if (extension.match(/jpg|jpeg|png|gif|webp|tiff|psd|svg/)) {
     // Image types
     gatewayURL = `https://ipfs.io/ipfs/${file.fileCID.split("//")[1]}`;
-    downloadURL = `https://ipfs.io/ipfs/${file.fileCID.split("//")[1]}`;
   } else if (extension.match(/zip|rar|7z|tar|gz|bz2/)) {
     // Archive types
-    gatewayURL = "https://archive.gateway.com";
-    downloadURL = "https://archive.download.com";
-  } else if (extension.match(/exe|dmg|apk|msi/)) {
+    gatewayURL =
+      "https://ipfs.io/ipfs/QmTUF6yNztg42MMh1v9fptzGBjC6fYfq4T1yRPnCa6qPBg/archive.png";
+  } else if (extension.match(/exe|dmg|apk|msi|deb|rpm/)) {
     // Software types
-    gatewayURL = "https://software.gateway.com";
-    downloadURL = "https://software.download.com";
-  } else if (extension.match(/doc|docx|pdf|xls|ppt|txt/)) {
+    gatewayURL =
+      "https://ipfs.io/ipfs/QmTUF6yNztg42MMh1v9fptzGBjC6fYfq4T1yRPnCa6qPBg/software.png";
+  } else if (extension.match(/doc|docx|pdf|txt|rtf|odf/)) {
     // Document types
-    gatewayURL = "https://document.gateway.com";
-    downloadURL = "https://document.download.com";
-  } else if (extension.match(/mp4|mov|avi|mkv|wmv|mpeg|flv/)) {
+    gatewayURL =
+      "https://ipfs.io/ipfs/QmTUF6yNztg42MMh1v9fptzGBjC6fYfq4T1yRPnCa6qPBg/document.png";
+  } else if (extension.match(/mp4|mov|avi|mkv|wmv|flv|3gp|webm|ogg/)) {
     // Video types
-    gatewayURL = "https://video.gateway.com";
-    downloadURL = "https://video.download.com";
-  } else if (extension.match(/mp3|wav|wma|aac|ogg|flac/)) {
+    gatewayURL = `https://ipfs.io/ipfs/${file.fileCID.split("//")[1]}`;
+  } else if (extension.match(/mp3|wav|wma|aac|ogg|flac|m4a/)) {
     // Audio types
-    gatewayURL = "https://audio.gateway.com";
-    downloadURL = "https://audio.download.com";
+    gatewayURL = `https://ipfs.io/ipfs/${file.fileCID.split("//")[1]}`;
+  } else if (extension.match(/stl|obj|dae|blend|fbx|3ds/)) {
+    // 3D cad
+    gatewayURL =
+      "https://ipfs.io/ipfs/QmTUF6yNztg42MMh1v9fptzGBjC6fYfq4T1yRPnCa6qPBg/3dcad.png";
+  } else if (extension.match(/sql|db|sqlite|parquet/)) {
+    //  Databases types
+    gatewayURL =
+      "https://ipfs.io/ipfs/QmTUF6yNztg42MMh1v9fptzGBjC6fYfq4T1yRPnCa6qPBg/database.png";
+  } else if (extension.match(/xls|xlsx|ods|numbers/)) {
+    // Spreadsheet types
+    gatewayURL =
+      "https://ipfs.io/ipfs/QmTUF6yNztg42MMh1v9fptzGBjC6fYfq4T1yRPnCa6qPBg/spreadsheet.png";
+  } else if (extension.match(/ppt|pptx/)) {
+    // Presentation types
+    gatewayURL =
+      "https://ipfs.io/ipfs/QmTUF6yNztg42MMh1v9fptzGBjC6fYfq4T1yRPnCa6qPBg/presentation.png";
+  } else if (extension.match(/psd|ai|afdesign|sketch/)) {
+    // Design types
+    gatewayURL =
+      "https://ipfs.io/ipfs/QmTUF6yNztg42MMh1v9fptzGBjC6fYfq4T1yRPnCa6qPBg/design.png";
+  } else if (extension.match(/shp|geojson|kml/)) {
+    // GIS types
+    gatewayURL =
+      "https://ipfs.io/ipfs/QmTUF6yNztg42MMh1v9fptzGBjC6fYfq4T1yRPnCa6qPBg/gis.png";
+  } else if (extension.match(/ttf|otf|woff|woff2/)) {
+    // Font types
+    gatewayURL =
+      "https://ipfs.io/ipfs/QmTUF6yNztg42MMh1v9fptzGBjC6fYfq4T1yRPnCa6qPBg/font.png";
+  } else if (extension.match(/exe|msi|apk|dmg|deb|rpm|pkg/)) {
+    // Executable types
+    gatewayURL =
+      "https://ipfs.io/ipfs/QmTUF6yNztg42MMh1v9fptzGBjC6fYfq4T1yRPnCa6qPBg/executable.png";
+  } else if (extension.match(/html|htm|js|css|php/)) {
+    // Web types
+    gatewayURL =
+      "https://ipfs.io/ipfs/QmTUF6yNztg42MMh1v9fptzGBjC6fYfq4T1yRPnCa6qPBg/web.png";
+  } else if (extension.match(/json|xml|yaml|toml/)) {
+    // Data types
+    gatewayURL =
+      "https://ipfs.io/ipfs/QmTUF6yNztg42MMh1v9fptzGBjC6fYfq4T1yRPnCa6qPBg/data.png";
+  } else if (extension.match(/cpp|h|swift|Java|cs|go|rb|fs|rs|ts|jsx/)) {
+    // Code types
+    gatewayURL =
+      "https://ipfs.io/ipfs/QmTUF6yNztg42MMh1v9fptzGBjC6fYfq4T1yRPnCa6qPBg/code.png";
+  } else if (extension.match(/iso|img|vhd|vmdk|ova|vdi/)) {
+    // Disk Image types
+    gatewayURL =
+      "https://ipfs.io/ipfs/QmTUF6yNztg42MMh1v9fptzGBjC6fYfq4T1yRPnCa6qPBg/disk.png";
+  } else if (extension.match(/md|markdown|rst|adoc|tex/)) {
+    // Text types
+    gatewayURL =
+      "https://ipfs.io/ipfs/QmTUF6yNztg42MMh1v9fptzGBjC6fYfq4T1yRPnCa6qPBg/text.png";
+  } else if (extension.match(/sol|vy|ipld|car/)) {
+    // Blockchain types
+    gatewayURL =
+      "https://ipfs.io/ipfs/QmTUF6yNztg42MMh1v9fptzGBjC6fYfq4T1yRPnCa6qPBg/blockchain.png";
+  } else if (extension.match(/torrent|magnet/)) {
+    // Torrent types
+    gatewayURL =
+      "https://ipfs.io/ipfs/QmTUF6yNztg42MMh1v9fptzGBjC6fYfq4T1yRPnCa6qPBg/torrent.png";
+  } else if (extension.match(/log|conf|ini|reg/)) {
+    //  Config types
+    gatewayURL =
+      "https://ipfs.io/ipfs/QmTUF6yNztg42MMh1v9fptzGBjC6fYfq4T1yRPnCa6qPBg/config.png";
   } else {
     // Other types
-    gatewayURL = "https://other.gateway.com";
-    downloadURL = "https://other.download.com";
+    gatewayURL =
+      "https://ipfs.io/ipfs/QmTUF6yNztg42MMh1v9fptzGBjC6fYfq4T1yRPnCa6qPBg/other.png";
   }
   const handleDownload = (e) => {
     e.stopPropagation();
@@ -62,7 +124,11 @@ export default function Card({ file }) {
           className="w-96p mx-auto h-72 object-cover border-blue-900 border-b-4"
         />
 
-        <h3 className="font-bold text-lg text-center">{file.fileName}</h3>
+        <h3 className="font-bold text-lg text-center">
+          {file.fileName.length > 10
+            ? file.fileName.slice(0, 11)
+            : file.fileName}
+        </h3>
 
         <div className="flex text-blue-500 justify-around my-2 items-center">
           <p>

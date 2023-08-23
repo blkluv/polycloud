@@ -213,7 +213,7 @@ export default function AppContextProvider(props) {
       },
     ]
   );
-
+  // let userName = "";
   return (
     <AppContext.Provider
       value={{

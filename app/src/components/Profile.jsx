@@ -38,12 +38,10 @@ export default function Profile() {
   });
   const storage = useStorage();
   const [open, setOpen] = useState(false);
-  const [name, setName] = useState(userName);
   const { mutateAsync: editUser } = useContractWrite(contract, "editUser");
   const handleNameEdit = (event) => {
     const newName = event.target.textContent;
     handleNameUpdate(newName);
-    setName(newName);
     setUserName(newName);
   };
 
@@ -88,6 +86,23 @@ export default function Profile() {
       }
     };
   }, [connectionStatus, window.ethereum]);
+
+  useEffect(() => {
+    if (
+      userName.length < 1 &&
+      address &&
+      data &&
+      data.userAddress != "0x0000000000000000000000000000000000000000"
+    ) {
+      setTotalFiles(data.totalFiles.toNumber());
+      setTotalStorage(data.totalStorage.toNumber());
+      setUsedStorage(data.usedStorage.toNumber());
+      setUserName(data.userName);
+      setUserImage(data.userImage);
+      setUserId(data.userId.toNumber());
+      setUserAddress(data.userAddress);
+    }
+  }, [data]);
   return (
     <>
       <Toaster />
@@ -127,7 +142,7 @@ export default function Profile() {
             }}
           />
         </div>
-        {/* Right - Details */}
+
         <div
           className="text-center flex flex-col justify-evenly"
           style={{ spellCheck: "false", MozSpellChecker: "false" }}
@@ -141,11 +156,10 @@ export default function Profile() {
                 handleNameEdit(event);
               }}
             >
-              {name}
+              {userName}
             </span>
           </div>
-          {/* Files Count */}
-          {/* Progress Bar */}
+
           <div className="w-full mx-auto">
             <CircularProgressbar
               strokeWidth={10}
