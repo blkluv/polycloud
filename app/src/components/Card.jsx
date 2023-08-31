@@ -110,12 +110,12 @@ export default function Card({ file }) {
     saveAs(downloadURL, `PolyCloudV2_${file.fileName}`);
   };
   return (
-    <div className="">
+    <div>
       <Toaster />
       <div
         className="max-w-xs border-blue-300 border-2 mx-auto w-72 bg-white rounded-lg shadow-md overflow-hidden h-full min-h-full cursor-pointer"
         onClick={() => {
-          window.open(gatewayURL, "_blank");
+          window.open(downloadURL, "_blank");
         }}
       >
         <img

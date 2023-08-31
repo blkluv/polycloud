@@ -60,7 +60,7 @@ export default function Files() {
           </button>
         </div>
         {files && files.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mx-auto md:w-10/12 w-full my-10">
+          <div className="grid grid-cols-1 md:grid-cols-4 md:gap-32 gap-10 mx-auto md:w-10/12 w-full my-10">
             {files.map((file) => (
               <Card file={file} key={file.fileId.toNumber()} />
             ))}

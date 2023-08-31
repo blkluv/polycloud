@@ -1,68 +1,72 @@
-# FULL3 setup (BACKEND)
+# Polycloud v2
 
-This is the web3 setup for a FULL STACK WEB3 project created by FULL3 package
+### Video Demo Link: [Add link](https://example.com)
 
-## HOW TO RUN
-- Create .env file
-- Fill with SAME DETAILS as mentioned in .env.example
-- uncomment the network and etherscan for the network you are going to use
-- run the hardhat project using simple `yarn` or `npm` command
+### Deployed Link: [Add link](https://example.com) 
+
+## Description
+
+Polycloud v2 is a decentralized storage platform built using Web3 technologies. It allows users to securely upload files and store them on IPFS/Filecoin while maintaining full control and privacy.
+
+## Features
+
+-📁 Drag and drop file uploading directly to IPFS
+
+-🔐 Encrypted file storage on IPFS/Filecoin network
+
+-🖥️ Beautiful and responsive UI for desktop and mobile
+
+-⚙️ Integration with Metamask and other wallets
+
+-🤝 File sharing via shareable IPFS CIDs
+
+-⬇️ Download files directly from IPFS
+
+-💽 Upgrade storage as per your needs
 
 
-### Deployment Scripts
-- **npm run deploy**: Deploy the project using the Hardhat framework to the Hardhat network.
-- **npm run deploy-mumbai**: Deploy the project to the Mumbai network.
-- **npm run deploy-mainnet**: Deploy the project to the Mainnet network.
-- **npm run deploy-sepolia**: Deploy the project to the Sepolia network.
-- **npm run deploy-bsc**: Deploy the project to the Binance Smart Chain (BSC) network.
-- **npm run deploy-bsctestnet**: Deploy the project to the BSC Testnet.
-- **npm run deploy-zkevm**: Deploy the project to the ZK-EVM network.
-- **npm run deploy-zkevmtestnet**: Deploy the project to the ZK-EVM Testnet.
-- **npm run deploy-optimism**: Deploy the project to the Optimism network.
-- **npm run deploy-eth**: Deploy the project to the Ethereum (ETH) network.
-- **npm run deploy-arbitrum**: Deploy the project to the Arbitrum network.
 
-### Other Useful Commands
-- **npm run node**: Start a local Hardhat node for development and testing purposes.
-- **npm run help**: Get help on Hardhat commands and usage.
-- **npm run networks**: List all available networks for deployment verification.
-- **npm run coverage**: Generate code coverage reports for the project.
+## Tech Stack
 
-### Using Yarn
-To use Yarn for running the commands, replace `npm run` with `yarn` in the above command list. For example:
+- [FULL3](https://www.npmjs.com/package/full3) - Full Stack WEB3 Starter package built on:
+  - [React](https://reactjs.org/) - Frontend framework
+  - [Hardhat](https://hardhat.org/) - Ethereum development environment 
+  - [Solidity](https://docs.soliditylang.org/) - Smart contract language
+  - [Vite](https://vitejs.dev/) - Build tool
+  - [Thirdweb](https://thirdweb.com/) - Web3 development SDK
+- [IPFS](https://ipfs.io/) - Decentralized storage network  
+- [Polygon](https://polygon.technology/) - Ethereum sidechain
 
-- **yarn deploy**: Deploy the project using the Hardhat framework to the Hardhat network.
-- **yarn deploy-mumbai**: Deploy the project to the Mumbai network.
-- **yarn deploy-mainnet**: Deploy the project to the Mainnet network.
-- **yarn deploy-sepolia**: Deploy the project to the Sepolia network.
-- **yarn deploy-bsc**: Deploy the project to the Binance Smart Chain (BSC) network.
-- **yarn deploy-bsctestnet**: Deploy the project to the BSC Testnet.
-- **yarn deploy-zkevm**: Deploy the project to the ZK-EVM network.
-- **yarn deploy-zkevmtestnet**: Deploy the project to the ZK-EVM Testnet.
-- **yarn deploy-optimism**: Deploy the project to the Optimism network.
-- **yarn deploy-eth**: Deploy the project to the Ethereum (ETH) network.
-- **yarn deploy-arbitrum**: Deploy the project to the Arbitrum network.
+## Smart Contract
 
-For other commands like `yarn node`, `yarn help`, `yarn networks`, and `yarn coverage`, simply replace `npm run` with `yarn` as well.
+- Written in Solidity and deployed on Polygon Mumbai testnet
+- Implements core file storage logic and account management
+- Fully unit tested using Hardhat framework and Chai assertions
 
-Remember to ensure that you have Yarn installed on your system before using Yarn commands.
 
-Sure! Here's the updated dependency list for the `devDependencies` and `dependencies` in your project, including their official websites:
 
-## Dev Dependencies
+## Preview
 
-- **[@nomicfoundation/hardhat-toolbox](https://github.com/nomiclabs/hardhat-toolbox)** (Version: ^2.0.0)
-  - Description: A collection of handy utility functions and tasks for Hardhat, a development environment for Ethereum.
-  - Website: [https://github.com/nomiclabs/hardhat-toolbox](https://github.com/nomiclabs/hardhat-toolbox)
+<img src="../public/PolyCloudv2_1.png" width="300"> <img src="../public/PolyCloudv2_2.png" width="300"> <img src="../public/PolyCloudv2_3.png" width="300"> <img src="../public/PolyCloudv2_4.png" width="300"> <img src="../public/PolyCloudv2_5.png" width="300"> 
 
-- **[hardhat](https://hardhat.org/)** (Version: ^2.13.0)
-  - Description: A popular development framework for Ethereum projects that provides a set of powerful features for smart contract development and deployment.
-  - Website: [https://hardhat.org/](https://hardhat.org/)
+# About the Developer
 
-## Dependencies
+Hello everyone, myself **Mohammad Ayaan Siddiqui** from India. I am a Full Stack WEB3 developer and a **DECENTRALIZATION MAXI**. Currently working as TECHNICAL CO-FOUNDER in a web3 startup based in Netherlands.
 
-- **[dotenv](https://www.npmjs.com/package/dotenv)** (Version: ^16.3.1)
-  - Description: A zero-dependency module that loads environment variables from a `.env` file into `process.env`.
-  - Website: [https://www.npmjs.com/package/dotenv](https://www.npmjs.com/package/dotenv)
 
-These dependencies are essential for your project's development, testing, and deployment processes. For more detailed information about each package, you can visit their respective websites linked above.
+<p align="center">
+<img src="../public/profile.jpg" alt="profile" style="height: 400px; width:500px;"/>
+</p>
+
+If you are interested in either of the topics or building in similar skills, connect with me below:-
+
+1.  ![Alt text](../public/taplink.png "Taplink") [My Taplink Dashboard](https://moayaan.taplink.ws/)
+
+
+2. ![Alt text](../public/linktree.png "linktree") [My Linktree with ALL SOCIALS](https://linktr.ee/ayaaneth)
+3. ![Alt text](../public/github.png "github") [Connect on Github](https://github.com/moayaan1911)
+4. ![Alt text](../public/linkedin.png "linkedin") [Connect on Linkedin](www.linkedin.com/in/ayaaneth)
+5. ![Alt text](../public/hashnode.png "dev") [Connect on Hashnode](https://moayaan.hashnode.dev/)
+6. ![Alt text](../public/twitter.png "twitter") [Connect on Twitter](https://www.twitter.com/usdisshitcoin)
+7. ![Alt text](../public/telegram.png "telegram") [Connect on Telegram](https://t.me/usdisshitcoin)
+8. ![Alt text](../public/dev.png "dev") [Connect on dev.to](https://dev.to/moayaan1911)

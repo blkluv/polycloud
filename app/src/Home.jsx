@@ -45,6 +45,9 @@ export default function Home() {
         }
       );
       setTimeout(() => {
+        toast.remove()
+      }, 1000);
+      setTimeout(() => {
         navigate("/create");
       }, 4000);
     } else if (
@@ -62,6 +65,9 @@ export default function Home() {
           position: "top-center",
         }
       );
+      setTimeout(() => {
+        toast.remove()
+      }, 1000);
       setTotalFiles(data.totalFiles.toNumber());
       setTotalStorage(data.totalStorage.toNumber());
       setUsedStorage(data.usedStorage.toNumber());

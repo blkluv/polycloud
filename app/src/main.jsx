@@ -1,6 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { ThirdwebProvider } from "@thirdweb-dev/react";
+import {
+  coinbaseWallet,
+  localWallet,
+  metamaskWallet,
+  smartWallet,
+  ThirdwebProvider,
+  walletConnect,
+} from "@thirdweb-dev/react";
 import App from "./App.jsx";
 import "./index.css";
 import { Polygon } from "@thirdweb-dev/chains";
@@ -49,6 +56,13 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       activeChain={Polygon}
       supportedChains={[Polygon]}
       clientId={clientId}
+      //      sdkOptions={{
+      //   gasless: {
+      //     openzeppelin: {
+      //       relayerUrl: "https://api.defender.openzeppelin.com/autotasks/d4b32a3e-2a10-46f1-8efa-4836bfa86682/runs/webhook/8a173a5a-5346-40f0-934f-94a0ffba82ca/QkpxXiYvzZ3Vs7EzFMR2TR",
+      //     },
+      //   },
+      // }}
     >
       <Navbar />
       <AppContextProvider>

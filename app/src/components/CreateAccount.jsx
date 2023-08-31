@@ -36,6 +36,10 @@ export default function CreateAccount() {
       const cid = await storage.upload(imageSelected);
       await createAccount({
         args: [name.toString(), cid.toString()],
+
+        override: {
+          from: address,
+        },
       });
       toast.success("Account created successfully.", { id: 2 });
       setTimeout(() => {

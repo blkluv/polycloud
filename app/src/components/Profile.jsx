@@ -127,7 +127,9 @@ export default function Profile() {
                   const cid = await storage.upload(file);
                   await editUser({
                     args: [userName, cid.toString()],
+                    from: userAddress,
                   });
+
                   toast.success("Edited Succesfully", { id: 2 });
                   setUserImage(cid.toString());
                 } catch (e) {
