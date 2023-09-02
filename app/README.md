@@ -1,8 +1,8 @@
 # Polycloud v2
 
-### Video Demo Link: [Add link](https://example.com)
+### Video Demo Link: [https://youtu.be/YlsXJIYxVbc](https://youtu.be/YlsXJIYxVbc)
 
-### Deployed Link: [Add link](https://example.com) 
+### Deployed Link: [https://polycloud.vercel.app/](https://polycloud.vercel.app/) 
 
 ## Description
 

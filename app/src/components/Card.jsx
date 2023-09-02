@@ -32,7 +32,7 @@ export default function Card({ file }) {
       "https://ipfs.io/ipfs/QmTUF6yNztg42MMh1v9fptzGBjC6fYfq4T1yRPnCa6qPBg/document.png";
   } else if (extension.match(/mp4|mov|avi|mkv|wmv|flv|3gp|webm|ogg/)) {
     // Video types
-    gatewayURL = `https://ipfs.io/ipfs/${file.fileCID.split("//")[1]}`;
+    gatewayURL = `https://ipfs.io/ipfs/QmcHB268Uss2RUsqR1qwazQMVDgtGRYqVCjrd6Zdrt8cch`;
   } else if (extension.match(/mp3|wav|wma|aac|ogg|flac|m4a/)) {
     // Audio types
     gatewayURL = `https://ipfs.io/ipfs/${file.fileCID.split("//")[1]}`;
