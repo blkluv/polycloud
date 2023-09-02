@@ -134,7 +134,7 @@ export default function Card({ file }) {
           <p>
             {fileSize < 1050
               ? `${fileSize} KB`
-              : `${fileSize * 1024 * 1024} GB`}
+              : `${(fileSize / (1024 * 1024)).toFixed(7)} GB`}
           </p>
           <div className="items-center align-middle">
             <button
