@@ -3,6 +3,7 @@ import { saveAs } from "file-saver";
 import { BsCloudDownloadFill } from "react-icons/bs";
 import { BsFillShareFill } from "react-icons/bs";
 import { Toaster, toast } from "react-hot-toast";
+import { MediaRenderer } from "@thirdweb-dev/react";
 export default function Card({ file }) {
   const millis = file.fileCreatedAt * 1000;
   const date = new Date(millis);
@@ -32,7 +33,8 @@ export default function Card({ file }) {
       "https://ipfs.io/ipfs/QmTUF6yNztg42MMh1v9fptzGBjC6fYfq4T1yRPnCa6qPBg/document.png";
   } else if (extension.match(/mp4|mov|avi|mkv|wmv|flv|3gp|webm|ogg/)) {
     // Video types
-    gatewayURL = `https://ipfs.io/ipfs/QmcHB268Uss2RUsqR1qwazQMVDgtGRYqVCjrd6Zdrt8cch`;
+    // gatewayURL = `https://ipfs.io/ipfs/QmcHB268Uss2RUsqR1qwazQMVDgtGRYqVCjrd6Zdrt8cch`;
+    gatewayURL = `https://ipfs.io/ipfs/${file.fileCID.split("//")[1]}`;
   } else if (extension.match(/mp3|wav|wma|aac|ogg|flac|m4a/)) {
     // Audio types
     gatewayURL = `https://ipfs.io/ipfs/${file.fileCID.split("//")[1]}`;
@@ -118,10 +120,11 @@ export default function Card({ file }) {
           window.open(downloadURL, "_blank");
         }}
       >
-        <img
+        <MediaRenderer
           src={gatewayURL}
           alt={file.fileName}
-          className="w-96p mx-auto h-72 object-cover border-blue-900 border-b-4"
+          width={"96%"}
+          className="mx-auto object-cover border-blue-900 border-b-4"
         />
 
         <h3 className="font-bold text-lg text-center">

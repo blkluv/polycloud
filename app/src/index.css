@@ -3,6 +3,6 @@
 @tailwind utilities;
 @layer utilities {
   .w-96p {
-    width: 96%;
+    width: 91%;
   }
 }
