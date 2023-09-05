@@ -145,7 +145,7 @@ export default function Card({ file }) {
                 e.stopPropagation();
                 toast.loading("Copying SHAREABLE link", { id: 2 });
                 const result = await fetch(
-                  `https://api.shrtco.de/v2/shorten?url=${gatewayURL}`
+                  `https://api.shrtco.de/v2/shorten?url=${downloadURL}`
                 );
                 const data = await result.json();
                 if (data.ok) {
