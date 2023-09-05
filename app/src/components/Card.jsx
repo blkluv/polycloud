@@ -123,13 +123,14 @@ export default function Card({ file }) {
         <MediaRenderer
           src={gatewayURL}
           alt={file.fileName}
-          width={"96%"}
+          width={"95%"}
           className="mx-auto object-cover border-blue-900 border-b-4"
         />
 
         <h3 className="font-bold text-lg text-center">
-          {file.fileName.length > 10
-            ? file.fileName.slice(0, 11)
+          {file.fileName.length > 18
+            ? file.fileName.slice(0, 18) + "..._ " + file.fileName.slice(file.fileName.lastIndexOf('.'))
+
             : file.fileName}
         </h3>
 
