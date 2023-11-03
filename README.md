@@ -67,6 +67,5 @@ If you are interested in either of the topics or building in similar skills, con
 3. ![Alt text](./public/github.png "github") [Connect on Github](https://github.com/moayaan1911)
 4. ![Alt text](./public/linkedin.png "linkedin") [Connect on Linkedin](www.linkedin.com/in/ayaaneth)
 5. ![Alt text](./public/hashnode.png "dev") [Connect on Hashnode](https://moayaan.hashnode.dev/)
-6. ![Alt text](./public/twitter.png "twitter") [Connect on Twitter](https://www.twitter.com/usdisshitcoin)
-7. ![Alt text](./public/telegram.png "telegram") [Connect on Telegram](https://t.me/usdisshitcoin)
-8. ![Alt text](./public/dev.png "dev") [Connect on dev.to](https://dev.to/moayaan1911)
+6. ![Alt text](./public/telegram.png "telegram") [Connect on Telegram](https://t.me/usdisshitcoin)
+7. ![Alt text](./public/dev.png "dev") [Connect on dev.to](https://dev.to/moayaan1911)
