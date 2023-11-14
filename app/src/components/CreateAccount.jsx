@@ -85,17 +85,17 @@ export default function CreateAccount() {
       <Toaster />
       <div className=" max-w-md mx-auto p-4 mt-20 rounded-md">
         <h1 className="text-3xl font-bold text-center">
-          Welcome to PolyCloud V2
+          Welcome to Cloud
         </h1>
 
         <p
           className="italic underline text-center cursor-pointer flex mt-2"
           onClick={() => {
-            window.open("https://linktr.ee/ayaaneth", "_blank");
+            window.open("https://linktr.ee/luvnft", "_blank");
           }}
         >
-          Built by Mohammad Ayaan Siddiqui{" "}
-          <SiEthereum className="mt-1 text-xl" /> moayaan.eth{" "}
+          Made with LUV{" "}
+          <SiEthereum className="mt-1 text-xl" /> blkluv.eth{" "}
           <SiEthereum className="mt-1 text-xl" />
         </p>
 

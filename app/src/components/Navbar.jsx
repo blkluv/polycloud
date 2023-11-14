@@ -12,17 +12,17 @@ const Navbar = () => {
         >
           <img src={banner} alt="banner" className="h-12 mr-3" />
           <h1 className="text-white text-lg md:text-3xl font-bold cursor-pointer">
-            PolyCloud V2
+            Cloud
           </h1>
         </div>
 
         <button
           className="text-white md:font-semibold mx-6 text-center md:text-xl text-sm"
           onClick={() => {
-            window.open("https://linktr.ee/ayaaneth", "_blank");
+            window.open("https://linktr.ee/luvnft", "_blank");
           }}
         >
-          💥Connect with Dev💥
+          💥LUV NFT💥
         </button>
       </div>
     </nav>

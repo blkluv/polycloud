@@ -107,7 +107,7 @@ export default function Profile() {
     <>
       <Toaster />
       <p className="text-center mx-auto text-2xl font-mono my-8">
-        🚀 Welcome to PolyCloud v2
+        🚀 Welcome to Cloud powered by LUV NFT
       </p>
       <div className="mx-auto md:max-w-lg flex justify-around flex-wrap  md:w-3/5 w-1/2">
         {/* Left - Image */}

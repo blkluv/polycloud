@@ -6,7 +6,7 @@
 
 ## Description
 
-Polycloud v2 is a decentralized storage platform built using Web3 technologies. It allows users to securely upload files and store them on IPFS/Filecoin while maintaining full control and privacy.
+LUV NFT Cloud is a decentralized storage platform built using Web3 technologies. It allows users to securely upload files and store them on IPFS/Filecoin while maintaining full control and privacy.
 
 ## Features
 

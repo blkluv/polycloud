@@ -8,13 +8,13 @@ export default function Banner() {
 
       {/* Right Content */}
       <div className="md:w-2/5 w-full md:pl-6">
-        <h1 className="text-4xl font-bold">PolyCloud V2</h1>
+        <h1 className="text-4xl font-bold">Cloud</h1>
 
         <p className="my-4 font-serif">
           {" "}
-          PolyCloud V2 offers decentralized storage powered by Thirdweb and
-          IPFS. The easy-to-use and interactive interface makes managing your
-          files simple. Share IPFS links to your files for easy distribution.
+          LUV NFT Cloud provides user-friendly decentralized storage,
+          allowing you to effortlessly share IPFS links for seamless 
+          file distribution.
         </p>
         <p className="font-bold text-xl text-gray-400">
           CONNECT YOUR WALLET TO CONTINUE
